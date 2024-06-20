@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@media only screen and (min-width: 580px){
+  
+body {
+  background-color: 'black';
+
+  
+}
+.container{
+  background-color: 'black';
+
+}
+
+.title2 {
+  /* margin: 0 auto; */
+  width: 100%;
+  max-width: 50rem;
+  font-size: 6rem;
+  text-align: center;
+  animation: fadeIn 6s ease-out forwards;
+  font-family: "Rubik", "sans-serif"; /* Change the font style here */
+  margin-bottom: -5px;
+  margin-left: 10%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+
+  width: 100%;
+  height: 80%;
+  max-width: 400px;
+  padding: 10rem 2.5rem;
+  border-radius: 1 rem;
+  border: 1px solid transparent;
+  backdrop-filter: blur(1rem);
+  box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+
+  border-top-color: rgba(225, 225, 225, 0.5);
+  border-left-color: rgba(225, 225, 225, 0.5);
+  border-bottom-color: rgba(225, 225, 225, 0.1);
+  border-right-color: rgba(225, 225, 225, 0.1);
+}
+
+.cb1 {
+  background-color: rgba(225, 225, 225, 0.1);
+  color: white;
+}
+
+.cb2 {
+  color: black;
+  background: linear-gradient(
+    to right bottom,
+    rgba(225, 225, 225, 0.5),
+    rgba(225, 225, 225, 0.3)
+  );
+}
+
+.card-number {
+  color: rgba(225, 225, 225, 0.08);
+  font-size: 8rem;
+  z-index: -1;
+  position: absolute;
+  top: -1rem;
+  right: 2.5rem;
+}
+.btn {
+  margin-top: 30px;
+  border-radius: 2rem;
+}
+.btn:hover {
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+}
+.question {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 150px
+}
+
+h3, a.btn {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+}
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width: 580px){
+  body {
+   background-color: 'black';
+  
+    color: white;
+  }
+  
+  .title2 {
+    /* margin: 0 auto; */
+    width: 100%;
+    max-width: 50rem;
+    font-size: 50px; /* Reduced font size */
+    text-align: center;
+    animation: fadeIn 6s ease-out forwards;
+    font-family: "Rubik", "sans-serif"; /* Change the font style here */
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 20px; /* Added margin-bottom for spacing */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .card {
+  
+    width: 100%;
+    
+    max-width: 400px;
+    padding: 10rem 2.5rem;
+    border-radius: 1 rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+  
+    border-top-color: rgba(225, 225, 225, 0.5);
+    border-left-color: rgba(225, 225, 225, 0.5);
+    border-bottom-color: rgba(225, 225, 225, 0.1);
+    border-right-color: rgba(225, 225, 225, 0.1);
+  }
+  
+  .cb1 {
+    background-color: rgba(225, 225, 225, 0.1);
+    color: white;
+  }
+  
+  .cb2 {
+    color: black;
+    background: linear-gradient(
+      to right bottom,
+      rgba(225, 225, 225, 0.5),
+      rgba(225, 225, 225, 0.3)
+    );
+  }
+  
+  .card-number {
+    color: rgba(225, 225, 225, 0.08);
+    font-size: 8rem;
+    z-index: -1;
+    position: absolute;
+    top: -1rem;
+    right: 2.5rem;
+  }
+  .btn {
+    margin-top: 30px;
+    border-radius: 2rem;
+  }
+  .btn:hover {
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  .question {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    align-items: center;
+    margin-bottom: 20px; /* Added margin-bottom for spacing */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 150px;
+  }
+  
+
+
+}
+
+button {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #7700ff, #4ce3f7);
+  border-radius: 20px;
+  width: '10%';
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  justify-self: center;
+  padding: 0.6em 1.5em;
+ }
+ 
+ button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+ }
+ 
+ @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #6105da66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }

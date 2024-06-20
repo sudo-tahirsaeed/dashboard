@@ -1,0 +1,101 @@
+/* Default styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@media only screen and (min-width: 712px){
+.detail-card {
+  height: auto;
+  display: flex;
+  background-color: white;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center; /* Align items horizontally (center) */
+  align-items: center; /* Align items vertically (center) */
+  flex: 1;
+}
+
+.image-section img {
+  width: 50%;
+  height: auto;
+}
+
+.text-section {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  
+}
+
+.text-section h2 {
+  margin-top: 10%;
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+}
+
+.text-section p {
+  margin-top: 20px;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+}
+.text-section p svg{
+  
+  margin-right: 10px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+}
+
+
+/* Media query for screens 600px or less */
+@media only screen and (max-width: 600px) {
+  .detail-card {
+    height: auto;
+    display: flex;
+    background-color: white;
+  }
+  
+  .image-section {
+    display: flex;
+    justify-content: center; /* Align items horizontally (center) */
+    align-items: center; /* Align items vertically (center) */
+    flex: 1;
+    margin-top: 20%;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6rem;
+  }
+  
+  .text-section {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  .text-section h2 {
+    margin-top: 20%;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+  }
+  
+  .text-section p {
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .text-section p svg{
+    
+    margin-right: 10px;
+  }
+
+}

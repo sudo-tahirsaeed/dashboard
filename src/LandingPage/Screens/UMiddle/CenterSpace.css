@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@media only screen and (min-width: 1024px) {
+  .center-space {
+    height: auto;
+   
+    background-color: black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3%; 
+    
+  }
+
+  .center-text-container {
+    text-align: center;
+  }
+
+  .center-text {
+    color: white;
+    font-size: 75px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px; /* Add margin between the headings */
+  }
+
+  .Text2 {
+    color: rgb(136, 134, 134);
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0; /* Remove the default margin-top */
+  }
+}
+
+/* Media query for screens 600px or less */
+@media only screen and (max-width: 1023px) {
+  .center-space {
+    height: auto;
+   
+    background-color: black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3%; 
+  }
+
+  .center-text-container {
+    text-align: center;
+  }
+
+  .center-text {
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 40px; /* Add margin between the headings */
+  }
+
+  .Text2 {
+    color: rgb(136, 134, 134);
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0; /* Remove the default margin-top */
+  }
+}

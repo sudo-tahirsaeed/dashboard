@@ -1,0 +1,42 @@
+@media only screen and (min-width: 580px){
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0; /* Adjust as needed */
+    height: auto;
+}
+
+.footer h5 {
+    color: #fff;
+}
+
+.footer p, .footer ul {
+    color: #ccc;
+}
+
+.footer ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+}
+@media only screen and (max-width: 580px){
+    .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 50px 0; /* Adjust as needed */
+        height: 40vh;
+    }
+    
+    .footer h5 {
+        color: #fff;
+    }
+    
+    .footer p, .footer ul {
+        color: #ccc;
+    }
+    
+    .footer ul li {
+        list-style: none;
+        padding: 5px 0;
+    }
+}

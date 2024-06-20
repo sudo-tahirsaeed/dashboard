@@ -1,0 +1,27 @@
+.custom-input {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+  }
+  .h2{
+    color:'red'
+  }
+  .custom-button {
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px; /* Increase the font size */
+    padding: 10px 20px; /* Increase the padding */
+  }
+  
+  .custom-button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .Re-Quote {
+    font-size: 44px;
+  }
+  
