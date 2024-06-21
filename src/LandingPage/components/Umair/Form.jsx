@@ -15,15 +15,31 @@ function ContactForm() {
         </Col>
       </Row>
       <Row>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+
+            flexWrap: "wrap",
+          }}
+        >
           <h3 style={{ color: "white" }}>
             Official WhatsApp:{" "}
             <a
               target="_blank"
               href="https://wa.me/923316670557?text=Hey%20we%20want%20to%20inquire%20about%20ToneSync%20AI."
             >
-              <img height={50} width={50} src="whatsapp.png"></img>
+              <img
+                alt="Chat now"
+                height={50}
+                width={50}
+                src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png "
+              ></img>
             </a>
+          </h3>
+          <h3 style={{ color: "white" }}>
+            Email:{" "}
+            <a style={{ color: "yellow" }}>official@ayzenntechnologies.com</a>
           </h3>
         </div>
       </Row>

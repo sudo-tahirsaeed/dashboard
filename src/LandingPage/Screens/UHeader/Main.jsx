@@ -38,6 +38,7 @@ function Main() {
         >
           Welcome to ToneSync AI
         </h2>
+
         <h1 style={{ textAlign: "center", padding: 10, margin: 0 }}>
           {" "}
           <span style={{ fontWeight: "bold", color: "rgb(124, 27, 208)" }}>
