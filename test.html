@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagination Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .pagination li {
+        margin: 0 5px;
+    }
+    .pagination li a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        color: #333;
+    }
+    .pagination li a:hover {
+        background-color: #f2f2f2;
+    }
+    .active {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<h2>Table with Pagination</h2>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Serial No</th>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+      <th>Column 4</th>
+      <th>Column 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table body will be populated dynamically -->
+  </tbody>
+</table>
+
+<ul class="pagination" id="pagination">
+    <!-- Pagination links will be generated dynamically -->
+</ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Generate random data for demonstration
+    const data = [];
+    const totalEntries = 50; // Total entries for pagination
+    for (let i = 0; i < totalEntries; i++) {
+        data.push({
+            serialNo: i + 1,
+            col1: 'Data ' + (i + 1),
+            col2: Math.floor(Math.random() * 100),
+            col3: Math.random() > 0.5 ? 'Yes' : 'No',
+            col4: Math.random() * 1000,
+            col5: new Date().toLocaleDateString()
+        });
+    }
+
+    const tableBody = document.querySelector('#myTable tbody');
+    const paginationContainer = document.querySelector('#pagination');
+    const entriesPerPage = 10;
+    const totalPages = Math.ceil(totalEntries / entriesPerPage);
+    
+    function generateTable(page) {
+        tableBody.innerHTML = '';
+        const startIndex = (page - 1) * entriesPerPage;
+        const endIndex = startIndex + entriesPerPage;
+        
+        for (let i = startIndex; i < endIndex && i < totalEntries; i++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${data[i].serialNo}</td>
+                <td>${data[i].col1}</td>
+                <td>${data[i].col2}</td>
+                <td>${data[i].col3}</td>
+                <td>${data[i].col4}</td>
+                <td>${data[i].col5}</td>
+            `;
+            tableBody.appendChild(row);
+        }
+    }
+    
+    function generatePagination() {
+        paginationContainer.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = '#';
+            link.textContent = i;
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                generateTable(i);
+                highlightActiveLink(i);
+            });
+            li.appendChild(link);
+            paginationContainer.appendChild(li);
+        }
+    }
+
+    function highlightActiveLink(currentPage) {
+        const links = paginationContainer.getElementsByTagName('a');
+        for (let link of links) {
+            if (link.textContent == currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        }
+    }
+
+    // Initial table and pagination generation
+    generateTable(1);
+    generatePagination();
+});
+</script>
+
+</body>
+</html>
